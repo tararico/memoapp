@@ -12,12 +12,12 @@ ul li  {
   position: relative;
   display: block;
   text-align: center;
-  width: 10%;
+  width: 8%;
   margin-left: auto;
   margin-right: 10px;
   font-weight: bold;
   padding: 0.6em 0.4em;
-  background: #f4fbfb;
+  background: #00a69a;
   border: solid 2px #ababab;
   border-radius: 10px;
 }
@@ -25,8 +25,8 @@ ul li  {
 .button a {
   display: block;
   text-decoration: none;
-  color:#646464;
-  background: #f4fbfb;
+  color:#eeeeee;
+  background: #00a69a;
 }
 
 .memo_text {
@@ -35,7 +35,7 @@ ul li  {
   margin: 10px;
   text-align: left;
   color: #646464;
-  background: #eeeeee;
+  background: #f4fbfb;
   border: solid 2px #ababab;
   border-radius: 10px;
 }
@@ -47,7 +47,9 @@ ul li  {
   width: 10%;
   font-weight: bold;
   padding: 0.6em 0.4em;
-  background: #f4fbfb;
+  background: #00a69a;
+  color:#eeeeee;
+  font-weight: bold;
   border: solid 2px #ababab;
   border-radius: 10px;
 }
@@ -57,12 +59,13 @@ ul li  {
   text-decoration: none;
   font-size: 14px;
   font-weight: bold;
-  color:#646464;
-  background: #f4fbfb;
+  color:#eeeeee;
+  font-weight: bold;
+  background: #00a69a;
 }
 
 .memo_title, .memo_content {
-  background: #eeeeee;
+  background: #f4fbfb;
   border: solid 2px #ababab;
   border-radius: 10px;
   padding: 0.6em 0.4em;

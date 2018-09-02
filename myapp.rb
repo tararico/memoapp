@@ -27,7 +27,6 @@ get '/memos/new' do
   @title = 'memoapp'
   @content = 'メモアプリ'
   erb :new
-# メモを作る画面表示
 end
 
 get '/memos/:memo_title/edit' do

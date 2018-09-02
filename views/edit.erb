@@ -9,9 +9,9 @@
   <h1><%= @content %></h1>
 <%# メモの内容を表示、編集できる %>
   <form method="POST" action="/memos/<%= @memo_title %>">
-  <textarea name="content"rows="15" cols="30"><%= @text %></textarea></br>
+  <textarea name="content"rows="15" cols="30" class="memo_text"><%= @text %></textarea></br>
   <input type="hidden" name="_method" value="PATCH"></input>
-  <button type="submit">変更</button>
+  <button type="submit" class="form_btn">変更</button>
   </form>
 </body>
 </html>

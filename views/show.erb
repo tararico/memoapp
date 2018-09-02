@@ -9,10 +9,10 @@
   <h1><%= @content %></h1>
 <%# メモの内容を表示する。削除・編集へのリンクを作る %>
   <p class="memo_text"><%= @text %></p>
-  <button type="submit" value="edit" class="form_btn"><a href="/memos/<%= @memo_title %>/edit">編集</a></button>
+  <button type="submit" value="変更" class="form_btn"><a href="/memos/<%= @memo_title %>/edit">変更</a></button>
   <form method="POST"  action="/memos/<%= @memo_title %>">
     <input type="hidden" name="_method" value="DELETE"></input>
-    <button type="submit">削除</button>
+    <button type="submit"class="form_btn">削除</button>
   </form>
 </body>
 </html>
