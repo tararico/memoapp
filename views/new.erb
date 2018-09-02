@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <link href="<%= url('/style.css') %>" rel="stylesheet" type="text/css" />
+  <title><%= @title %></title>
+</head>
+<body class="container">
+  <h1><%= @content %></h1>
+  <form method="post" action="/memos">
+    <p>タイトル</p><input type="text" name="memo_title" class="memo_title"></input>
+    <p>内容</p><textarea name="content"rows="15" cols="30" class="memo_content"></textarea></br>
+    <button type="submit" value="save" class="form_btn">保存</button>
+  </form>
+</body>
+</html>
