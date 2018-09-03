@@ -8,9 +8,13 @@
 <body class="container">
   <h1><%= @content %></h1>
   <form method="post" action="/memos">
-    <p>タイトル</p><input type="text" name="memo_title" class="memo_title"></input>
-    <p>内容</p><textarea name="content"rows="15" cols="30" class="memo_content"></textarea></br>
+    <h3>タイトル</h3>
+    <input type="text" name="memo_title" class="memo_title"></input>
+    <h3>内容</h3
+    ><textarea name="content"rows="15" cols="30" class="memo_content"></textarea></br>
+    <div class="button_wrapper">
     <button type="submit" value="save" class="form_btn">保存</button>
+    </div>
   </form>
 </body>
 </html>
