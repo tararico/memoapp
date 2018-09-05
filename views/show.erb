@@ -12,7 +12,7 @@
     <div class="button_wrapper">
       <button type="submit" value="変更" class="form_btn"><a href="/memos/<%= @memo_title %>/edit">変更</a></button>
       <form method="POST"  action="/memos/<%= @memo_title %>">
-        <input type="hidden" name="_method" value="DELETE"></input>
+        <input type="hidden" name="_method" value="DELETE">
         <button type="submit"class="form_btn">削除</button>
       </form>
     </div> 
