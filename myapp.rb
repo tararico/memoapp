@@ -7,7 +7,6 @@ get '/memos' do
   @title = 'memoapp'
   @content = 'メモアプリ'
   @ichirans = Pathname.glob("memos/*.txt").map{|i| i.basename(".txt")}
-  
   erb :index
 end    
 
