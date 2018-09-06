@@ -4,7 +4,7 @@ require 'pathname'
 require 'date'
 
 get '/memos' do
-  @ichirans = Pathname.glob("memos/*.txt").map{|i| i.basename(".txt")}
+  @memos = Pathname.glob("memos/*.txt").map{|i| i.basename(".txt")}
   erb :index
 end
 

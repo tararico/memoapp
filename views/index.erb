@@ -9,7 +9,7 @@
     <h1>メモアプリ</h1>
     <div class="button"><a href="/memos/new">追加</a></div>
     <ul>
-      <% @ichirans.each do |i| %>
+      <% @memos.each do |i| %>
         <li><a href="/memos/<%= i %>"><%= i %></a></li>
       <% end %>
     </ul>
