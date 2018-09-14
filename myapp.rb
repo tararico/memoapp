@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'sinatra/reloader'
 require 'pathname'
-require 'date'
+require 'yaml'
 
 get '/memos' do
   @memos = Pathname.glob("memos/*.txt").map{|i| i.basename(".txt")}
@@ -9,7 +9,9 @@ get '/memos' do
 end
 
 post '/memos' do
-  File.open("memos/#{params[:memo_title]}.txt", "w") do |f| 
+  num = Pathname.glob("memos/*.txt").map{ |i| i.basename(".txt").to_i.last.to_i}
+  file_name = num + 1
+  File.open("memos/#{file_name}.txt", "w") do |f|
     f.puts(params[:content])
   end
   redirect '/memos'
