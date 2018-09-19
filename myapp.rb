@@ -9,7 +9,7 @@ get '/memos' do
 end
 
 post '/memos' do
-  num = Pathname.glob("memos/*.txt").map{ |i| i.basename(".txt").to_i.last.to_i}
+  num = Pathname.glob("memos/*.txt").map{|i| i.basename(".txt").to_s.to_i}.last || 0
   file_name = num + 1
   File.open("memos/#{file_name}.txt", "w") do |f|
     f.puts(params[:content])
