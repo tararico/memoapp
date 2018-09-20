@@ -11,8 +11,9 @@ end
 post '/memos' do
   num = Pathname.glob("memos/*.txt").map{|i| i.basename(".txt").to_s.to_i}.last || 0
   file_name = num + 1
+  data = {'title'=> params[:memo_title], 'body'=> params[:content]}
   File.open("memos/#{file_name}.txt", "w") do |f|
-    f.puts(params[:content])
+  YAML.dump data, f
   end
   redirect '/memos'
 end
@@ -22,14 +23,16 @@ get '/memos/new' do
 end
 
 get '/memos/:memo_title/edit' do
-  @text = File.read("memos/#{params[:memo_title]}.txt")
-  @memo_title = "#{params[:memo_title]}"
+  data = YAML.load_file("memos/#{params[:memo_title]}.txt")
+  @text = data['body'] 
+  @memo_title = data['title'] 
   erb :edit
 end
 
 get '/memos/:memo_title' do
-  @text = File.read("memos/#{params[:memo_title]}.txt")
-  @memo_title = "#{params[:memo_title]}"
+  data = YAML.load_file("memos/#{params[:memo_title]}.txt")
+  @text = data['body'] 
+  @memo_title = data['title'] 
   erb :show
 end
 
