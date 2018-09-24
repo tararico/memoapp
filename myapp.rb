@@ -14,9 +14,8 @@ end
 post '/memos' do
   num = Pathname.glob("memos/*.txt").map{|i| i.basename(".txt").to_s.to_i}.max || 0
   file_name = num + 1
-  data = {'title'=> params[:memo_title], 'body'=> params[:content]}
   File.open("memos/#{file_name}.txt", "w") do |f|
-  YAML.dump data, f
+    YAML.dump({'title'=> params[:memo_title], 'body'=> params[:content]}, f)
   end
   redirect '/memos'
 end
