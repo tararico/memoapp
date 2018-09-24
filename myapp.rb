@@ -6,7 +6,7 @@ require 'yaml'
 get '/memos' do
   @memos = {}
   Pathname.glob("memos/*.txt").map{|i| i.basename(".txt")}.each do |i|
-   @memos[i] =  YAML.load_file("memos/#{i}.txt")["title"]
+    @memos[i] =  YAML.load_file("memos/#{i}.txt")["title"]
   end
   erb :index
 end
