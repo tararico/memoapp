@@ -33,10 +33,10 @@ get '/memos/:memo_title/edit' do
 end
 
 get '/memos/:memo_title' do
-  @file_name = params[:memo_title]
   data = YAML.load_file("memos/#{params[:memo_title]}.txt")
   @text = data['body']
   @memo_title = data['title']
+  @file_name = params[:memo_title]
   erb :show
 end
 
