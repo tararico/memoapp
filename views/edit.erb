@@ -7,7 +7,10 @@
   </head>
   <body class="container">
     <h1>メモアプリ</h1>
-    <form method="POST" action="/memos/<%= @memo_title %>">
+    <form method="POST" action="/memos/<%= @file_name %>">
+    <h3>タイトル</h3>
+     <textarea name="title" class="memo_title"><%= @memo_title %></textarea>
+      <h3>内容</h3>
       <textarea name="content"rows="15" cols="30" class="memo_textarea"><%= @text %></textarea><br>
       <div class="button_wrapper">
         <input type="hidden" name="_method" value="PATCH">

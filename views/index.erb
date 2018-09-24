@@ -9,8 +9,8 @@
     <h1>メモアプリ</h1>
     <div class="button"><a href="/memos/new">追加</a></div>
     <ul>
-      <% @memos.each do |i| %>
-        <li><a href="/memos/<%= i %>"><%= i %></a></li>
+      <% @memos.each do |k, v| %>
+        <li><a href="/memos/<%= k %>"><%= v %></a></li>
       <% end %>
     </ul>
   </body>

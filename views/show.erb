@@ -10,8 +10,8 @@
     <h2><%= @memo_title %></h2>
     <p class="memo_text"><%= @text %></p>
     <div class="button_wrapper">
-      <button type="submit" value="変更" class="form_btn"><a href="/memos/<%= @memo_title %>/edit">変更</a></button>
-      <form method="POST"  action="/memos/<%= @memo_title %>">
+      <button type="submit" value="変更" class="form_btn"><a href="/memos/<%= @file_name %>/edit">変更</a></button>
+      <form method="POST"  action="/memos/<%= @file_name %>">
         <input type="hidden" name="_method" value="DELETE">
         <button type="submit"class="form_btn">削除</button>
       </form>
