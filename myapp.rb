@@ -41,9 +41,8 @@ get '/memos/:memo_title' do
 end
 
 patch '/memos/:memo_title' do
-  data = {'title'=> params[:title], 'body'=> params[:content]}
   File.open("memos/#{params[:memo_title]}.txt", "w") do |f|
-    YAML.dump data, f
+    YAML.dump({'title'=> params[:title], 'body'=> params[:content]}, f)
   end
   redirect '/memos'
 end
