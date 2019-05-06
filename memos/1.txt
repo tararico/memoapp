@@ -1,0 +1,3 @@
+---
+title: cat2
+body: 日本の猫

@@ -19,7 +19,7 @@ post '/memos' do
   end
   redirect '/memos'
 end
-    
+
 get '/memos/new' do
   erb :new
 end
